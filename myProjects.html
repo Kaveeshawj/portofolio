@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kaveesha Wijeweera - Portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fb51a6",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#3b0a24",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <main class="w-full">
+
+        <div id="header-placeholder"></div>
+
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">My Projects: Turning Ideas
+                        into Code</h2>
+                    <div
+                        class="mt-4 mx-auto w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse">
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="BidSphere project screenshot" class="w-full h-56 object-cover"
+                                src="images/bidsphere.png" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">BidSphere</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">BidSphere is a Java EE-based distributed online auction system that enables real-time bidding with manual and auto-bid handling, concurrency-safe management via Singleton Session Beans, and asynchronous notifications through JMS, designed for scalability and performance.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                   <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Java EE</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">EJB</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">JMS</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Servlets</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">JSP</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">GlassFish</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">IntelliJ IDEA</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/BidSphere">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="Fit-Mart project screenshot" class="w-full h-56 object-cover "
+                                src="images/Untitled design.png" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Fit-Mart</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">FitMart is an Android app that combines fitness training and shopping, allowing users to browse products, book trainers, locate gyms via Google Maps, and make secure purchases with real-time Firebase integration.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Android Studio</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Firebase</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Google Maps API</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">PayHere</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Glide</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">SQLite</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">MPAndroidChart</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Material Design</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/Fit-Mart">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="BidSphere project screenshot" class="w-full h-56 object-cover"
+                                src="images/globemed.png" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">GlobeMed</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">GlobeMed is a modular healthcare management system that integrates patient records, role-based access, appointment scheduling, billing & insurance processing, report generation, and security, focusing on maintainability and extensibility using design patterns.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                   <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Swing</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Design Patterns</span>
+
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/GlobeMed-">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="BidSphere project screenshot" class="w-full h-56 object-cover"
+                                src="images/nationsbank.png" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">NationsBank</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">NationsBank is a Java EE-based banking system that supports real-time fund transfers, scheduled transactions using TimerService, and automated monthly reports, emphasizing secure and efficient financial operations.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                   <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Java EE</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">EJB</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Servlets</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">JSP</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">GlassFish</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">IntelliJ IDEA</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/NationsBank">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="SHE project screenshot" class="w-full h-56 object-cover"
+                                src="images/she.png" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">SHE</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">SHE is a complete eCommerce web application for women to buy and sell handmade products, featuring secure authentication, admin panels, cart/watchlist, payments via PayHere, messaging, and responsive design.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Bootstrap</span>
+                                         <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">jQuery</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">PHP</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">AJAX</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">XML</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">JSON</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
+                                    <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">PayHere</span>
+                            
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/SHE">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="Jungle Run project screenshot" class="w-full h-56 object-cover"
+                                src="images/game.png" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Jungle Run</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">An engaging 2D game where
+                                players navigate a jungle, avoiding obstacles and collecting treasures. Developed using
+                                object-oriented programming principles for a modular and scalable codebase.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Unity</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">C#</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/Jungle-Run">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="Cakkery project screenshot" class="w-full h-56 object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFgYjpdEpsWyGy4NVV_bAe60_tEMiPV6xwOLqizCQPaIdH7_LsfBhPpSsN_AzGqkIn9S3fibsbr_3TgctvC3cwAEFOBGjJGLW33Elu3CcsL0boJ0CXZLPFm2dbo2Ujq5_rwBMTUKAjbjZUkFUxAGlMB0G3SnKKH1r6uDBJzf8PRsVEhJznxehnwRIuu6Tg_J7yDPJsTxlav9BIg5UyCOLznjOyGrn5YlUdFje_ViTcDeFrNdpLEx1yjTvcqLBJL3wNiha9qbrscII" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Cakkery</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">A delightful website for a
+                                local bakery, showcasing their products and allowing customers to place orders online.
+                                It features a responsive design and an easy-to-use content management system.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                                        <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                                  
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Hibernate</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/Cakkery">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="bg-background-light dark:bg-background-dark/50 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/30">
+                        <div class="relative">
+                            <img alt="Adyapanaya project screenshot" class="w-full h-56 object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHarj9273I5jjC6Ge03UMHtBs5LGzJ6mXI9RFQyaJx3oz8TpeOdevVBW9qvmqLtS4y0atAul8b03rCAuF_uIrTsfsr8Ufc372emdaifSEjyoS_2eclrPYC5xAvcrvTTb4D_zhIwEyxb8Z8I7vfU2c4fIdY_BTmorTom6SqHGAoczS84bKtMNHLOP9Zbl4Ubml2ti2cgGG3C4Xq-e98aijVbV3ySReinJ-LPhYN6cl0m1fv-4BZSoljOliSV_xsxzOzbQTtBXJRW5A" />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[calc(100%-14rem)]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Adyapanaya</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">Adyapanaya is a simple Java-based school management system for handling basic administrative tasks like student records and scheduling.</p>
+                            <div class="mt-4">
+                                <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+   
+                                </div>
+                            </div>
+                            <div class="mt-6 flex gap-4">
+                                <a class="flex-1 text-center bg-transparent border border-primary text-primary py-2 px-4 rounded-full text-sm font-semibold transition-colors duration-300 hover:bg-primary hover:text-white"
+                                    href="https://github.com/Kaveeshawj/Adyapanaya">View Code</a>
+                                <a class="flex-1 text-center bg-primary text-white py-2 px-4 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-105"
+                                    href="#">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-16">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Interested in working with me?
+                    </h3>
+                    <a class="inline-block bg-primary text-white py-3 px-8 rounded-full text-lg font-semibold transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-primary/50"
+                        href="#contact">Let's connect!</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- 🌙 Load header & footer -->
+    <script>
+        // Load header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // Initialize theme toggle after header is loaded
+                const themeToggleBtn = document.getElementById('theme-toggle');
+                const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+                const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+                // Set initial theme
+                if (localStorage.getItem('color-theme') === 'dark' ||
+                    (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    themeToggleLightIcon?.classList.remove('hidden');
+                    themeToggleDarkIcon?.classList.add('hidden');
+                    document.documentElement.classList.add('dark');
+                } else {
+                    themeToggleLightIcon?.classList.add('hidden');
+                    themeToggleDarkIcon?.classList.remove('hidden');
+                    document.documentElement.classList.remove('dark');
+                }
+
+                // Add click event
+                themeToggleBtn?.addEventListener('click', function () {
+                    themeToggleDarkIcon?.classList.toggle('hidden');
+                    themeToggleLightIcon?.classList.toggle('hidden');
+                    if (localStorage.getItem('color-theme')) {
+                        if (localStorage.getItem('color-theme') === 'light') {
+                            document.documentElement.classList.add('dark');
+                            localStorage.setItem('color-theme', 'dark');
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                            localStorage.setItem('color-theme', 'light');
+                        }
+                    } else {
+                        if (document.documentElement.classList.contains('dark')) {
+                            document.documentElement.classList.remove('dark');
+                            localStorage.setItem('color-theme', 'light');
+                        } else {
+                            document.documentElement.classList.add('dark');
+                            localStorage.setItem('color-theme', 'dark');
+                        }
+                    }
+                });
+            });
+
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
