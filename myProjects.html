@@ -10,25 +10,111 @@
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#fb51a6",
-                        "background-light": "#f8f5f7",
-                        "background-dark": "#3b0a24",
+                        "primary": "#f589bf",
+                        "secondary": "#ff9bd2",
+                        "background-light": "#fff4fa",
+                        "background-dark": "#1a0013",
                     },
-                    fontFamily: {
-                        "display": ["Spline Sans"]
-                    },
+                    fontFamily: { "display": ["Inter"] },
                     borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                    animation: { sparkle: "sparkle 5s linear infinite", float: "float 6s ease-in-out infinite" },
+                    keyframes: {
+                        sparkle: {
+                            "0%, 100%": { opacity: "0", transform: "scale(0.5) rotate(0deg)" },
+                            "50%": { opacity: "1", transform: "scale(1.2) rotate(20deg)" },
+                        },
+                        float: { "0%, 100%": { transform: "translateY(0px)" }, "50%": { transform: "translateY(-20px)" } },
+                    },
                 },
             },
-        }
+        };
     </script>
+
+    <style>
+        /* Sparkles */
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f589bf;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #ff9bd2, 0 0 15px #f589bf, 0 0 25px #ff9bd2;
+            animation: sparkle 5s linear infinite;
+        }
+
+        .sparkle:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .sparkle:nth-child(2) {
+            top: 40%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        .sparkle:nth-child(3) {
+            top: 70%;
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .sparkle:nth-child(4) {
+            top: 85%;
+            left: 60%;
+            animation-delay: 3s;
+        }
+
+        .sparkle:nth-child(5) {
+            top: 15%;
+            left: 90%;
+            animation-delay: 4s;
+        }
+
+        .sparkle:nth-child(6) {
+            top: 55%;
+            left: 5%;
+            animation-delay: 1.5s;
+        }
+
+        .light-mode-gradient {
+            background: radial-gradient(circle at top left, #fff4fa 0%, #ffd6e8 40%, #fff 100%);
+        }
+
+        .dark .dark-mode-gradient {
+            background: radial-gradient(circle at top left, #f589bf 0%, #b4136b 35%, #1a0013 100%);
+        }
+
+        .dark h1,
+        .dark p,
+        .dark a {
+            text-shadow: 0 0 6px rgba(245, 137, 191, 0.5);
+        }
+
+        .dark a.bg-primary {
+            box-shadow: 0 0 15px #f589bf80;
+        }
+
+        .dark a.bg-primary:hover {
+            box-shadow: 0 0 25px #ff9bd2aa;
+        }
+
+        .dark .sparkle {
+            background: #ff9bd2;
+            box-shadow: 0 0 12px #ff9bd2, 0 0 20px #f589bf, 0 0 30px #ff9bd2;
+        }
+    </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
@@ -337,7 +423,7 @@
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Interested in working with me?
                     </h3>
                     <a class="inline-block bg-primary text-white py-3 px-8 rounded-full text-lg font-semibold transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-primary/50"
-                        href="#contact">Let's connect!</a>
+                        href="connect.html">Let's connect!</a>
                 </div>
             </div>
         </section>
@@ -345,62 +431,64 @@
 
     <div id="footer-placeholder"></div>
 
-    <!-- 🌙 Load header & footer -->
     <script>
-        // Load header
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
+            // Load header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
 
-                // Initialize theme toggle after header is loaded
-                const themeToggleBtn = document.getElementById('theme-toggle');
-                const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-                const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+                    // Initialize theme toggle after header is loaded
+                    const themeToggleBtn = document.getElementById('theme-toggle');
+                    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+                    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-                // Set initial theme
-                if (localStorage.getItem('color-theme') === 'dark' ||
-                    (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    themeToggleLightIcon?.classList.remove('hidden');
-                    themeToggleDarkIcon?.classList.add('hidden');
-                    document.documentElement.classList.add('dark');
-                } else {
-                    themeToggleLightIcon?.classList.add('hidden');
-                    themeToggleDarkIcon?.classList.remove('hidden');
-                    document.documentElement.classList.remove('dark');
-                }
-
-                // Add click event
-                themeToggleBtn?.addEventListener('click', function () {
-                    themeToggleDarkIcon?.classList.toggle('hidden');
-                    themeToggleLightIcon?.classList.toggle('hidden');
-                    if (localStorage.getItem('color-theme')) {
-                        if (localStorage.getItem('color-theme') === 'light') {
-                            document.documentElement.classList.add('dark');
-                            localStorage.setItem('color-theme', 'dark');
-                        } else {
-                            document.documentElement.classList.remove('dark');
-                            localStorage.setItem('color-theme', 'light');
-                        }
+                    // Set initial theme
+                    if (localStorage.getItem('color-theme') === 'dark' ||
+                        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                        themeToggleLightIcon?.classList.remove('hidden');
+                        themeToggleDarkIcon?.classList.add('hidden');
+                        document.documentElement.classList.add('dark');
                     } else {
-                        if (document.documentElement.classList.contains('dark')) {
-                            document.documentElement.classList.remove('dark');
-                            localStorage.setItem('color-theme', 'light');
-                        } else {
-                            document.documentElement.classList.add('dark');
-                            localStorage.setItem('color-theme', 'dark');
-                        }
+                        themeToggleLightIcon?.classList.add('hidden');
+                        themeToggleDarkIcon?.classList.remove('hidden');
+                        document.documentElement.classList.remove('dark');
                     }
-                });
-            });
 
-        // Load footer
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
-    </script>
+                    // Add click event
+                    themeToggleBtn?.addEventListener('click', function () {
+                        themeToggleDarkIcon?.classList.toggle('hidden');
+                        themeToggleLightIcon?.classList.toggle('hidden');
+                        if (localStorage.getItem('color-theme')) {
+                            if (localStorage.getItem('color-theme') === 'light') {
+                                document.documentElement.classList.add('dark');
+                                localStorage.setItem('color-theme', 'dark');
+                            } else {
+                                document.documentElement.classList.remove('dark');
+                                localStorage.setItem('color-theme', 'light');
+                            }
+                        } else {
+                            if (document.documentElement.classList.contains('dark')) {
+                                document.documentElement.classList.remove('dark');
+                                localStorage.setItem('color-theme', 'light');
+                            } else {
+                                document.documentElement.classList.add('dark');
+                                localStorage.setItem('color-theme', 'dark');
+                            }
+                        }
+                    });
+                });
+
+            // Load footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        </script>
+
+
+
 </body>
 
 </html>
